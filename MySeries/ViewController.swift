@@ -15,10 +15,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
        
-        let credentials = WSCredentials()
-        
-        let service = AuthenticationGatewayImpl()
-        service.authenticate(with: credentials)
+//        let credentials = WSCredentials()
+//        
+//        let service = AuthenticationGatewayImpl()
+//        service.authenticate(with: credentials)
         
     }
 

@@ -16,6 +16,7 @@ public enum EndPoint: String, URLConvertible, CustomStringConvertible {
     
     case authentication = "oauth/authorize"
     case token = "oauth/token"
+    case myShows = "calendars/my/shows/"
     
     public func asURL() throws -> URL {
         return URL(string: self.description)!
@@ -27,8 +28,15 @@ public enum EndPoint: String, URLConvertible, CustomStringConvertible {
             return EndPoint.defaultURL + self.rawValue
         case .token:
             return EndPoint.defaultURL + self.rawValue
+        case .myShows:
+            return EndPoint.defaultURL + self.rawValue
         }
     }
     
+    
+    public func withParams(params: [String]) -> String {
+        let str = description + params.joined(separator: "/")
+        return str
+    }
     
 }

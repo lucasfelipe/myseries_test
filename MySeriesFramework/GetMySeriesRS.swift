@@ -1,16 +1,17 @@
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-public struct GetMySeriesRS: Mappable {
-    var firstAired: Date?
-    var episode: EpisodeEntity?
-    var show: ShowEntity?
+public class GetMySeriesRS: Object, Mappable {
+    public dynamic var firstAired: Date?
+    public dynamic var episode: EpisodeEntity?
+    public dynamic var show: ShowEntity?
     
-    public init?(map: Map) {
-        
+    public required convenience init?(map: Map) {
+        self.init()
     }
     
-    public mutating func mapping(map: Map) {
+    public func mapping(map: Map) {
         firstAired <- map["first_aired"]
         episode <- map["episode"]
         show <- map["show"]

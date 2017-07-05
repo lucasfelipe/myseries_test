@@ -26,11 +26,14 @@ target 'MySeriesFramework' do
   pod 'Alamofire', '~> 4.4'
   pod 'ObjectMapper', '~> 2.2'
   pod 'OAuthSwift', '~> 1.1.0'
+  pod 'RealmSwift'
  
 
   target 'MySeriesFrameworkTests' do
     inherit! :search_paths
     # Pods for testing
   end
+  
+  
 
 end

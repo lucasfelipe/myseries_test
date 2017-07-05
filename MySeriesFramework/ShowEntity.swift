@@ -8,17 +8,23 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-public struct ShowEntity: Show, Mappable {
-    public var title: String?
-    public var year: Int?
+public class ShowEntity: Object, Mappable {
+    public dynamic var title: String?
+    public let year: RealmOptional<Int> = RealmOptional<Int>()
     
-    public init?(map: Map) {
-        
+    public required convenience init?(map: Map) {
+        self.init()
     }
     
-    public mutating func mapping(map: Map) {
+    public func mapping(map: Map) {
         title <- map["title"]
-        year <- map["year"]
+        year.value <- map["year"]
+    }
+    
+    
+    override public static func indexedProperties() -> [String] {
+        return ["title"]
     }
 }

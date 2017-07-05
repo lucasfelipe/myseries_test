@@ -1,18 +1,19 @@
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-public struct EpisodeEntity: Episode, Mappable {
-    public var season: Int?
-    public var number: Int?
-    public var title: String?
+public class EpisodeEntity: Object, Mappable {
+    public let season: RealmOptional<Int> = RealmOptional<Int>()
+    public let number: RealmOptional<Int> = RealmOptional<Int>()
+    public dynamic var title: String?
     
-    public init?(map: Map) {
-        
+    required convenience public init?(map: Map) {
+        self.init()
     }
     
-    public mutating func mapping(map: Map) {
-        season <- map["season"]
-        number <- map["number"]
+    public func mapping(map: Map) {
+        season.value <- map["season"]
+        number.value <- map["number"]
         title <- map["title"]
     }
 }

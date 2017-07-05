@@ -1,13 +1,14 @@
 import XCTest
+@testable import MySeriesFramework
 
 class AuthenticationGatewayTests: XCTestCase {
     
-    let credentials = WSCredentials(with: "code", grant: GrantType.authorization)
-    var authenticationService: AuthenticationGateway!
+    let credentials = WSCredentials()
+    var authenticationService: MySeriesGateway!
     
     override func setUp() {
         super.setUp()
-        self.authenticationService = AuthenticationGatewayImpl()
+        self.authenticationService = MySeriesGatewayImpl()
     }
     
     override func tearDown() {

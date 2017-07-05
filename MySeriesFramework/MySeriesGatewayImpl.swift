@@ -1,13 +1,6 @@
-//
-//  AuthenticationGatewayImpl.swift
-//  MySeries
-//
-//  Created by Dev on 04/07/17.
-//  Copyright © 2017 Wooba. All rights reserved.
-//
-
 import Foundation
 import OAuthSwift
+import Alamofire
 
 public class MySeriesGatewayImpl: MySeriesGateway {
     
@@ -48,7 +41,20 @@ public class MySeriesGatewayImpl: MySeriesGateway {
 //        task.resume()
     }
     
-    public func getMySeries(request: GetMySeriesRQ, completion: @escaping (Result<GetMySeriesRS, HttpError>) -> Void) {
-        
+    public func getMySeries(request: GetMySeriesRQ, completion: @escaping (Result<[GetMySeriesRS], HttpError>) -> Void) {
+//        self.requester.sendForArray(url: EndPoint.myShows.description,
+//                            method: .get, parameters: request,
+//                            encoding: URLEncoding.methodDependent) { (result: Result<[GetMySeriesRS], HttpError>) in
+//            completion(result)
+//        }
+    }
+}
+
+extension Date {
+    func toString() -> String {
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-mm-dd"
+        format.dateStyle = DateFormatter.Style.short
+        return format.string(from: self)
     }
 }

@@ -10,5 +10,5 @@ import Foundation
 
 public protocol MySeriesGateway {
     func authenticate(with credentials: WSCredentials) -> Void
-    func getMySeries(request: GetMySeriesRQ, completion: @escaping (Result<GetMySeriesRS, HttpError>) -> Void)
+    func getMySeries(request: GetMySeriesRQ, completion: @escaping (Result<[GetMySeriesRS], HttpError>) -> Void)
 }
