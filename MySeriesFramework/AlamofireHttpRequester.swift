@@ -16,31 +16,18 @@ class AlamofireHttpRequester: SessionDelegate {
     }
     
     func send<Request, Response>(url: String, method: HTTPMethod, parameters: Request, encoding: ParameterEncoding = JSONEncoding.default,
-              completion: @escaping (Result<Response, HttpError>) -> Void) where Request: Mappable, Response: Mappable {
+              completion: @escaping (ResultWrapper<Response>) -> Void) where Request: Mappable, Response: Mappable {
         let backgroundQueue = DispatchQueue.global(qos: .background)
         backgroundQueue.async {
             let params = parameters.toJSON()
             self.doRequest(url: url, method: method, params: params, encoding: encoding, success: { (result) in
                 if let object = Mapper<Response>().map(JSONObject: result) {
-                    completion(Result.success(object))
-                } else { completion(Result.failure(HttpError.unknown)) }
+                    completion(ResultWrapper<Response>(with: [object]))
+                } else if let arrayObj = Mapper<Response>().mapArray(JSONObject: result) {
+                    completion(ResultWrapper<Response>(with: arrayObj))
+                } else { completion(ResultWrapper<Response>(with: HttpError.unknown)) }
             }, failure: { (error) in
-                completion(Result.failure(error))
-            })
-        }
-    }
-    
-    func sendForArray<Request, Response>(url: String, method: HTTPMethod, parameters: Request, encoding: ParameterEncoding = JSONEncoding.default,
-              completion: @escaping (Result<[Response], HttpError>) -> Void) where Request: Mappable, Response: Mappable {
-        let backgroundQueue = DispatchQueue.global(qos: .background)
-        backgroundQueue.async {
-            let params = parameters.toJSON()
-            self.doRequest(url: url, method: method, params: params, encoding: encoding, success: { (result) in
-                if let object = Mapper<Response>().mapArray(JSONObject: result) {
-                    completion(Result.success(object))
-                } else { completion(Result.failure(HttpError.unknown)) }
-            }, failure: { (error) in
-                completion(Result.failure(error))
+                completion(ResultWrapper<Response>(with: error))
             })
         }
     }

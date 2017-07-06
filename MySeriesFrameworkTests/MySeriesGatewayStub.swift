@@ -11,11 +11,11 @@ import Foundation
 
 class MySeriesGatewayStub: MySeriesGateway {
     
-    func authenticate(with credentials: WSCredentials) {
+    func authenticate(completion: @escaping (_ html: String) -> Void) {
         
     }
     
-    func getMySeries(request: GetMySeriesRQ, completion: @escaping (Result<[GetMySeriesRS], HttpError>) -> Void) {
+    func getMySeries(request: GetMySeriesRQ, completion: @escaping (ResultWrapper<GetMySeriesRS>) -> Void) {
         
     }
     

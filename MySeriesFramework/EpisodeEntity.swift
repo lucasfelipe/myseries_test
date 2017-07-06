@@ -6,6 +6,7 @@ public class EpisodeEntity: Object, Mappable {
     public let season: RealmOptional<Int> = RealmOptional<Int>()
     public let number: RealmOptional<Int> = RealmOptional<Int>()
     public dynamic var title: String?
+    public dynamic var ids: IdEntity?
     
     required convenience public init?(map: Map) {
         self.init()
@@ -15,5 +16,6 @@ public class EpisodeEntity: Object, Mappable {
         season.value <- map["season"]
         number.value <- map["number"]
         title <- map["title"]
+        ids <- map["ids"]
     }
 }

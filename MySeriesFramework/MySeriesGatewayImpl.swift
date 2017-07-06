@@ -8,11 +8,13 @@ public class MySeriesGatewayImpl: MySeriesGateway {
         "Content-Type": "application/json"
     ]
     
+    private var credentials = WSCredentials()
+    
     private let requester = AlamofireHttpRequester()
     
     public init() {}
     
-   public func authenticate(with credentials: WSCredentials) -> Void {
+    public func authenticate(completion: @escaping (_ html: String) -> Void) -> Void {
         let auth = OAuth2Swift(
             consumerKey: credentials.getClientID(),
             consumerSecret: credentials.getClientSecret(),
@@ -32,19 +34,19 @@ public class MySeriesGatewayImpl: MySeriesGateway {
 //        let task = URLSession.shared.dataTask(with: request) { data, response, error in
 //            if let response = response, let data = data {
 //                print(response)
-//                print(String(data: data, encoding: .utf8)!)
+//                completion(String(data: data, encoding: .utf8)!)
 //            } else {
-//                print(error?.localizedDescription)
+//                print(error!.localizedDescription)
 //            }
 //        }
 //        
 //        task.resume()
     }
     
-    public func getMySeries(request: GetMySeriesRQ, completion: @escaping (Result<[GetMySeriesRS], HttpError>) -> Void) {
-//        self.requester.sendForArray(url: EndPoint.myShows.description,
+    public func getMySeries(request: GetMySeriesRQ, completion: @escaping (ResultWrapper<GetMySeriesRS>) -> Void) {
+//        self.requester.send(url: EndPoint.myShows.description,
 //                            method: .get, parameters: request,
-//                            encoding: URLEncoding.methodDependent) { (result: Result<[GetMySeriesRS], HttpError>) in
+//                            encoding: URLEncoding.methodDependent) { (result: ResultWrapper<GetMySeriesRS>) in
 //            completion(result)
 //        }
     }

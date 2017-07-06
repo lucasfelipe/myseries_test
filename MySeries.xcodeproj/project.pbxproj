@@ -16,7 +16,6 @@
 		D7476A441F0D374500350A4E /* MySeriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7476A431F0D374500350A4E /* MySeriesRepository.swift */; };
 		D75BB8471F0BBB1F008127D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8461F0BBB1F008127D6 /* AppDelegate.swift */; };
 		D75BB84C1F0BBB1F008127D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75BB84A1F0BBB1F008127D6 /* Main.storyboard */; };
-		D75BB84E1F0BBB1F008127D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75BB84D1F0BBB1F008127D6 /* Assets.xcassets */; };
 		D75BB8511F0BBB1F008127D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75BB84F1F0BBB1F008127D6 /* LaunchScreen.storyboard */; };
 		D75BB85C1F0BBB1F008127D6 /* MySeriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB85B1F0BBB1F008127D6 /* MySeriesTests.swift */; };
 		D75BB8671F0BBB20008127D6 /* MySeriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8661F0BBB20008127D6 /* MySeriesUITests.swift */; };
@@ -27,13 +26,13 @@
 		D75BB8A51F0BC147008127D6 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8A41F0BC147008127D6 /* EndPoint.swift */; };
 		D75BB8A71F0BD900008127D6 /* MySeriesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8A61F0BD900008127D6 /* MySeriesGateway.swift */; };
 		D75BB8A91F0BD9D9008127D6 /* WSCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8A81F0BD9D9008127D6 /* WSCredentials.swift */; };
-		D75BB8AB1F0BDEFC008127D6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8AA1F0BDEFC008127D6 /* Result.swift */; };
+		D75BB8AB1F0BDEFC008127D6 /* ResultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8AA1F0BDEFC008127D6 /* ResultWrapper.swift */; };
 		D75BB8AD1F0BDF8C008127D6 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8AC1F0BDF8C008127D6 /* HttpError.swift */; };
 		D75BB8AF1F0BE229008127D6 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8AE1F0BE229008127D6 /* Token.swift */; };
 		D75BB8B11F0BE3EB008127D6 /* MySeriesGatewayImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8B01F0BE3EB008127D6 /* MySeriesGatewayImpl.swift */; };
 		D75BB8B41F0BE5F1008127D6 /* AuthRQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8B31F0BE5F1008127D6 /* AuthRQ.swift */; };
 		D75BB8B91F0C00A6008127D6 /* AuthenticationGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8B81F0C00A6008127D6 /* AuthenticationGatewayTests.swift */; };
-		D75BB8C31F0C13FA008127D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8C21F0C13FA008127D6 /* ViewController.swift */; };
+		D75BB8C31F0C13FA008127D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8C21F0C13FA008127D6 /* LoginViewController.swift */; };
 		D75BB8C81F0C2C70008127D6 /* GetMySeriesRQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8C71F0C2C70008127D6 /* GetMySeriesRQ.swift */; };
 		D75BB8CC1F0C2DCE008127D6 /* ShowEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8CB1F0C2DCE008127D6 /* ShowEntity.swift */; };
 		D75BB8CF1F0C2E86008127D6 /* GetMySeriesRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8CE1F0C2E86008127D6 /* GetMySeriesRS.swift */; };
@@ -44,6 +43,10 @@
 		D7DC13281F0D7C6A00DB1B79 /* ListMySeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC13271F0D7C6A00DB1B79 /* ListMySeriesViewController.swift */; };
 		D7DC132A1F0D7DAA00DB1B79 /* ListMySeriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC13291F0D7DAA00DB1B79 /* ListMySeriesDataSource.swift */; };
 		D7DC132C1F0D800C00DB1B79 /* MySeriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC132B1F0D800C00DB1B79 /* MySeriesCollectionViewCell.swift */; };
+		D7E328891F0E817D00EF6B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E328881F0E817D00EF6B01 /* Assets.xcassets */; };
+		D7E3288B1F0EA5D900EF6B01 /* IdEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3288A1F0EA5D900EF6B01 /* IdEntity.swift */; };
+		D7E3288D1F0EC7E700EF6B01 /* AuthenticationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3288C1F0EC7E700EF6B01 /* AuthenticationGateway.swift */; };
+		D7E3288F1F0EC87D00EF6B01 /* AuthenticationGatewayImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3288E1F0EC87D00EF6B01 /* AuthenticationGatewayImpl.swift */; };
 		DF57849F13B5ACB48089BF73 /* Pods_MySeries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9497D69CFB75776F24AFEC4 /* Pods_MySeries.framework */; };
 		FD7691678316CFCFE28F84F9 /* Pods_MySeriesFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE6211452432202E706544A /* Pods_MySeriesFrameworkTests.framework */; };
 /* End PBXBuildFile section */
@@ -121,7 +124,6 @@
 		D75BB8431F0BBB1F008127D6 /* MySeries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySeries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75BB8461F0BBB1F008127D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D75BB84B1F0BBB1F008127D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D75BB84D1F0BBB1F008127D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D75BB8501F0BBB1F008127D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D75BB8521F0BBB1F008127D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D75BB8571F0BBB1F008127D6 /* MySeriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySeriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,13 +140,13 @@
 		D75BB8A41F0BC147008127D6 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		D75BB8A61F0BD900008127D6 /* MySeriesGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySeriesGateway.swift; sourceTree = "<group>"; };
 		D75BB8A81F0BD9D9008127D6 /* WSCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCredentials.swift; sourceTree = "<group>"; };
-		D75BB8AA1F0BDEFC008127D6 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D75BB8AA1F0BDEFC008127D6 /* ResultWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultWrapper.swift; sourceTree = "<group>"; };
 		D75BB8AC1F0BDF8C008127D6 /* HttpError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		D75BB8AE1F0BE229008127D6 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		D75BB8B01F0BE3EB008127D6 /* MySeriesGatewayImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySeriesGatewayImpl.swift; sourceTree = "<group>"; };
 		D75BB8B31F0BE5F1008127D6 /* AuthRQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRQ.swift; sourceTree = "<group>"; };
 		D75BB8B81F0C00A6008127D6 /* AuthenticationGatewayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGatewayTests.swift; sourceTree = "<group>"; };
-		D75BB8C21F0C13FA008127D6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D75BB8C21F0C13FA008127D6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D75BB8C71F0C2C70008127D6 /* GetMySeriesRQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMySeriesRQ.swift; sourceTree = "<group>"; };
 		D75BB8CB1F0C2DCE008127D6 /* ShowEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEntity.swift; sourceTree = "<group>"; };
 		D75BB8CE1F0C2E86008127D6 /* GetMySeriesRS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMySeriesRS.swift; sourceTree = "<group>"; };
@@ -155,6 +157,10 @@
 		D7DC13271F0D7C6A00DB1B79 /* ListMySeriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMySeriesViewController.swift; sourceTree = "<group>"; };
 		D7DC13291F0D7DAA00DB1B79 /* ListMySeriesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMySeriesDataSource.swift; sourceTree = "<group>"; };
 		D7DC132B1F0D800C00DB1B79 /* MySeriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySeriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		D7E328881F0E817D00EF6B01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7E3288A1F0EA5D900EF6B01 /* IdEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdEntity.swift; sourceTree = "<group>"; };
+		D7E3288C1F0EC7E700EF6B01 /* AuthenticationGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGateway.swift; sourceTree = "<group>"; };
+		D7E3288E1F0EC87D00EF6B01 /* AuthenticationGatewayImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGatewayImpl.swift; sourceTree = "<group>"; };
 		D9497D69CFB75776F24AFEC4 /* Pods_MySeries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySeries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC6AE3FBD465958582A216D /* Pods-MySeries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySeries.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySeries/Pods-MySeries.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -333,7 +339,6 @@
 				D75BB89A1F0BBFEB008127D6 /* Gateways */,
 				D75BB8991F0BBFE0008127D6 /* Repositories */,
 				D75BB8981F0BBFC8008127D6 /* Entities */,
-				D75BB8971F0BBFB1008127D6 /* ValueObjects */,
 				D75BB87B1F0BBBC5008127D6 /* MySeriesFramework.h */,
 				D75BB87C1F0BBBC5008127D6 /* Info.plist */,
 			);
@@ -350,18 +355,12 @@
 			path = MySeriesFrameworkTests;
 			sourceTree = "<group>";
 		};
-		D75BB8971F0BBFB1008127D6 /* ValueObjects */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ValueObjects;
-			sourceTree = "<group>";
-		};
 		D75BB8981F0BBFC8008127D6 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				D75BB8CB1F0C2DCE008127D6 /* ShowEntity.swift */,
 				D75BB8D21F0C2F8D008127D6 /* EpisodeEntity.swift */,
+				D7E3288A1F0EA5D900EF6B01 /* IdEntity.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -383,6 +382,8 @@
 				D75BB8A61F0BD900008127D6 /* MySeriesGateway.swift */,
 				D75BB8B01F0BE3EB008127D6 /* MySeriesGatewayImpl.swift */,
 				D75BB8D41F0C3100008127D6 /* AlamofireHttpRequester.swift */,
+				D7E3288C1F0EC7E700EF6B01 /* AuthenticationGateway.swift */,
+				D7E3288E1F0EC87D00EF6B01 /* AuthenticationGatewayImpl.swift */,
 			);
 			name = Gateways;
 			sourceTree = "<group>";
@@ -414,8 +415,8 @@
 			isa = PBXGroup;
 			children = (
 				D75BB8461F0BBB1F008127D6 /* AppDelegate.swift */,
-				D75BB84D1F0BBB1F008127D6 /* Assets.xcassets */,
 				D75BB8521F0BBB1F008127D6 /* Info.plist */,
+				D7E328881F0E817D00EF6B01 /* Assets.xcassets */,
 			);
 			name = ApplicationBase;
 			sourceTree = "<group>";
@@ -423,7 +424,7 @@
 		D75BB89F1F0BC031008127D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D75BB8C21F0C13FA008127D6 /* ViewController.swift */,
+				D75BB8C21F0C13FA008127D6 /* LoginViewController.swift */,
 				D7DC13271F0D7C6A00DB1B79 /* ListMySeriesViewController.swift */,
 				D7DC13291F0D7DAA00DB1B79 /* ListMySeriesDataSource.swift */,
 			);
@@ -459,7 +460,7 @@
 			children = (
 				D75BB8A41F0BC147008127D6 /* EndPoint.swift */,
 				D75BB8A81F0BD9D9008127D6 /* WSCredentials.swift */,
-				D75BB8AA1F0BDEFC008127D6 /* Result.swift */,
+				D75BB8AA1F0BDEFC008127D6 /* ResultWrapper.swift */,
 				D75BB8AC1F0BDF8C008127D6 /* HttpError.swift */,
 				D75BB8AE1F0BE229008127D6 /* Token.swift */,
 			);
@@ -697,7 +698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D75BB8511F0BBB1F008127D6 /* LaunchScreen.storyboard in Resources */,
-				D75BB84E1F0BBB1F008127D6 /* Assets.xcassets in Resources */,
+				D7E328891F0E817D00EF6B01 /* Assets.xcassets in Resources */,
 				D75BB84C1F0BBB1F008127D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -950,7 +951,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D75BB8C31F0C13FA008127D6 /* ViewController.swift in Sources */,
+				D75BB8C31F0C13FA008127D6 /* LoginViewController.swift in Sources */,
 				D7DC132C1F0D800C00DB1B79 /* MySeriesCollectionViewCell.swift in Sources */,
 				D7DC13281F0D7C6A00DB1B79 /* ListMySeriesViewController.swift in Sources */,
 				D75BB8471F0BBB1F008127D6 /* AppDelegate.swift in Sources */,
@@ -983,16 +984,19 @@
 				D75BB8CC1F0C2DCE008127D6 /* ShowEntity.swift in Sources */,
 				D75BB8AD1F0BDF8C008127D6 /* HttpError.swift in Sources */,
 				D75BB8AF1F0BE229008127D6 /* Token.swift in Sources */,
+				D7E3288B1F0EA5D900EF6B01 /* IdEntity.swift in Sources */,
 				D7476A421F0D351D00350A4E /* ListMySeriesInteractor.swift in Sources */,
 				D7476A401F0D2B4300350A4E /* ListMySeriesOutputPresenter.swift in Sources */,
 				D75BB8D51F0C3100008127D6 /* AlamofireHttpRequester.swift in Sources */,
 				D75BB8B41F0BE5F1008127D6 /* AuthRQ.swift in Sources */,
+				D7E3288F1F0EC87D00EF6B01 /* AuthenticationGatewayImpl.swift in Sources */,
 				D75BB8B11F0BE3EB008127D6 /* MySeriesGatewayImpl.swift in Sources */,
 				D7476A441F0D374500350A4E /* MySeriesRepository.swift in Sources */,
 				D75BB8D31F0C2F8D008127D6 /* EpisodeEntity.swift in Sources */,
 				D75BB8C81F0C2C70008127D6 /* GetMySeriesRQ.swift in Sources */,
 				D75BB8CF1F0C2E86008127D6 /* GetMySeriesRS.swift in Sources */,
-				D75BB8AB1F0BDEFC008127D6 /* Result.swift in Sources */,
+				D75BB8AB1F0BDEFC008127D6 /* ResultWrapper.swift in Sources */,
+				D7E3288D1F0EC7E700EF6B01 /* AuthenticationGateway.swift in Sources */,
 				D75BB8A71F0BD900008127D6 /* MySeriesGateway.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
