@@ -1,39 +1,55 @@
 
 import Foundation
+import ObjectMapper
 
 public class AuthenticationGatewayImpl: NSObject, AuthenticationGateway, URLSessionTaskDelegate {
 
-    private let credentials = WSCredentials()
+    private var credentials = WSCredentials()
     private var urlSession: URLSession!
-    
-    public var redirectNotification: Notification!
-    public var stopNotification: Notification!
-    
+    private var tokenRepository: TokenRepository = TokenRepositoryStore()
     
     public override init() {
         super.init()
         let config = URLSessionConfiguration.default
         self.urlSession = URLSession(configuration: config, delegate: self, delegateQueue: nil)
-        self.redirectNotification = Notification(name: Notification.Name(rawValue: "REDIRECT"), object: nil, userInfo: nil)
-        self.stopNotification = Notification(name: Notification.Name(rawValue: "STOP"), object: nil, userInfo: nil)
     }
     
     public func authenticate() {
-        let url = URL(string: "https://api.trakt.tv/oauth/authorize?response_type=code&client_id=\(credentials.getClientID())&redirect_uri=\(credentials.getRedirectURI())")!
+        let stringURL = EndPoint.authentication.description + ("?response_type=code&client_id=\(credentials.getClientID())&redirect_uri=\(credentials.getRedirectURI())")
+        let url = URL(string: stringURL)!
         let request = URLRequest(url: url)
         
         self.urlSession.dataTask(with: request).resume()
         
     }
     
-    public func urlSession(_ session: URLSession, task: URLSessionTask, willPerformHTTPRedirection response: HTTPURLResponse, newRequest request: URLRequest, completionHandler: @escaping (URLRequest?) -> Void) {
-        print(response.allHeaderFields)
-        print(response.statusCode)
-        print(response.url!.absoluteString)
-        print(request.allHTTPHeaderFields!)
-        print(request.httpMethod!)
-        print(request.url!.absoluteString)
-        NotificationCenter.default.post(name: self.redirectNotification.name, object: request)
+    public func urlSession(_ session: URLSession, task: URLSessionTask,
+                           willPerformHTTPRedirection response: HTTPURLResponse,
+                           newRequest request: URLRequest, completionHandler: @escaping (URLRequest?) -> Void) {
+        
+        NotificationCenter.default.post(name: MySeriesNotification.AuthNotification, object: request)
+        
+    }
+    
+    public func getToken(_ url: URL) {
+        if let code = url.absoluteString.components(separatedBy: "?code=").last {
+            guard let urlGetToken = URL(string: EndPoint.token.description) else { return }
+            self.credentials.setCode(code: code)
+            
+            var request = URLRequest(url: urlGetToken)
+            request.addValue("application/json", forHTTPHeaderField: "Content-type")
+            request.httpMethod = "POST"
+            request.httpBody = self.credentials.toJSONString()?.data(using: .utf8)
+            
+            self.urlSession.dataTask(with: request, completionHandler: { (responseData, response, error) in
+                if let tokenString = String(data: responseData!, encoding: .utf8) {
+                    guard let token = Mapper<Token>().map(JSONObject: tokenString) else { return }
+                    self.tokenRepository.createOrUpdate(token: token)
+                }
+                
+            }).resume()
+            
+        }
         
     }
     

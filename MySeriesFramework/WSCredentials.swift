@@ -6,7 +6,7 @@ public struct WSCredentials: Mappable {
     private var code: String = "code"
     private var clientID = "fe2e45411d70786aa9a6e6aa2d6c2d1e535e664e65e93be6230337fe0ce62fd0"
     private var clientSecret = "035993f6d77e039ebba06b5bd00104c49ff316e8a0a8538697921e381ba425a9"
-    private var redirectURI = "urn:ietf:wg:oauth:2.0:oob"
+    private var redirectURI = "MySeries://oauth/callback"
     private var grantType = GrantType.authorization
     
     public init() {}
@@ -36,6 +36,10 @@ public struct WSCredentials: Mappable {
     
     func getResponseType() -> String {
         return self.code;
+    }
+    
+    mutating func setCode(code: String) {
+        self.code = code
     }
 }
 

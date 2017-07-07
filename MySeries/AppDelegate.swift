@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        OAuth2Swift.handle(url: url)
+        if let loginView = self.window?.rootViewController as? LoginViewController {
+            loginView.requestToken(url: url)
+        }
         return true
     }
 

@@ -44,7 +44,7 @@ open class MySeriesRepositoryStore: MySeriesRepository {
     
     public func deleteAll() {
         try! realmDB.write {
-            realmDB.deleteAll()
+            realmDB.delete(series)
         }
     }
 }

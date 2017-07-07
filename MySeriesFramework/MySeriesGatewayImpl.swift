@@ -14,7 +14,7 @@ public class MySeriesGatewayImpl: MySeriesGateway {
     
     public init() {}
     
-    public func authenticate(completion: @escaping (_ html: String) -> Void) -> Void {
+    public func authenticate() -> Void {
         let auth = OAuth2Swift(
             consumerKey: credentials.getClientID(),
             consumerSecret: credentials.getClientSecret(),
