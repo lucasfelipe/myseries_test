@@ -4,11 +4,11 @@ import XCTest
 class AuthenticationGatewayTests: XCTestCase {
     
     let credentials = WSCredentials()
-    var authenticationService: MySeriesGateway!
+    var authenticationService: AuthenticationGateway!
     
     override func setUp() {
         super.setUp()
-        self.authenticationService = MySeriesGatewayImpl()
+        self.authenticationService = AuthenticationGatewayImpl()
     }
     
     override func tearDown() {
@@ -16,7 +16,18 @@ class AuthenticationGatewayTests: XCTestCase {
     }
     
     func testAuthenticationResultSuccessCode() {
+        let authExp = expectation(description: "Authenticate")
+        NotificationCenter.default.addObserver(forName: MySeriesNotification.AuthNotification, object: nil, queue: nil) { (notf) in
+            authExp.fulfill()
+        }
+        self.authenticationService.authenticate()
+        
+        waitForExpectations(timeout: 60) { (authExpError) in
+            XCTAssertNil(authExpError, authExpError!.localizedDescription)
+        }
         
     }
+    
+    
     
 }
