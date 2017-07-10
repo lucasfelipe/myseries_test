@@ -1,5 +1,4 @@
 import Foundation
-import OAuthSwift
 import Alamofire
 
 public class MySeriesGatewayImpl: MySeriesGateway {
