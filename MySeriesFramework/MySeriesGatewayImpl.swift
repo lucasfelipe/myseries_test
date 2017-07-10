@@ -8,8 +8,6 @@ public class MySeriesGatewayImpl: MySeriesGateway {
         "Content-Type": "application/json"
     ]
     
-    private var credentials = WSCredentials()
-    
     private let requester = AlamofireHttpRequester()
     
     public init() {}
@@ -20,14 +18,5 @@ public class MySeriesGatewayImpl: MySeriesGateway {
 //                            encoding: URLEncoding.methodDependent) { (result: ResultWrapper<GetMySeriesRS>) in
 //            completion(result)
 //        }
-    }
-}
-
-extension Date {
-    func toString() -> String {
-        let format = DateFormatter()
-        format.dateFormat = "yyyy-mm-dd"
-        format.dateStyle = DateFormatter.Style.short
-        return format.string(from: self)
     }
 }
