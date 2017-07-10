@@ -16,7 +16,7 @@ class ListMySeriesDataSource: NSObject, UICollectionViewDataSource, ListMySeries
     
     override init() {
         super.init()
-        _ = ListMySeriesInteractor(presenterOutput: self, repository: MySeriesRepositoryStore())
+        ListMySeriesInteractor(presenterOutput: self, repository: MySeriesRepositoryStore()).list()
     }
     
     func list(series: [GetMySeriesRS]) {

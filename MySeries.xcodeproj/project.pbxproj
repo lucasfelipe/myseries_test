@@ -32,7 +32,6 @@
 		D75BB8AD1F0BDF8C008127D6 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8AC1F0BDF8C008127D6 /* HttpError.swift */; };
 		D75BB8AF1F0BE229008127D6 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8AE1F0BE229008127D6 /* Token.swift */; };
 		D75BB8B11F0BE3EB008127D6 /* MySeriesGatewayImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8B01F0BE3EB008127D6 /* MySeriesGatewayImpl.swift */; };
-		D75BB8B41F0BE5F1008127D6 /* AuthRQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8B31F0BE5F1008127D6 /* AuthRQ.swift */; };
 		D75BB8B91F0C00A6008127D6 /* AuthenticationGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8B81F0C00A6008127D6 /* AuthenticationGatewayTests.swift */; };
 		D75BB8C31F0C13FA008127D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8C21F0C13FA008127D6 /* LoginViewController.swift */; };
 		D75BB8C81F0C2C70008127D6 /* GetMySeriesRQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75BB8C71F0C2C70008127D6 /* GetMySeriesRQ.swift */; };
@@ -148,7 +147,6 @@
 		D75BB8AC1F0BDF8C008127D6 /* HttpError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		D75BB8AE1F0BE229008127D6 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		D75BB8B01F0BE3EB008127D6 /* MySeriesGatewayImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySeriesGatewayImpl.swift; sourceTree = "<group>"; };
-		D75BB8B31F0BE5F1008127D6 /* AuthRQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRQ.swift; sourceTree = "<group>"; };
 		D75BB8B81F0C00A6008127D6 /* AuthenticationGatewayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGatewayTests.swift; sourceTree = "<group>"; };
 		D75BB8C21F0C13FA008127D6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D75BB8C71F0C2C70008127D6 /* GetMySeriesRQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMySeriesRQ.swift; sourceTree = "<group>"; };
@@ -476,7 +474,6 @@
 		D75BB8B21F0BE5DE008127D6 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				D75BB8B31F0BE5F1008127D6 /* AuthRQ.swift */,
 				D75BB8C71F0C2C70008127D6 /* GetMySeriesRQ.swift */,
 			);
 			name = Requests;
@@ -995,7 +992,6 @@
 				D7476A421F0D351D00350A4E /* ListMySeriesInteractor.swift in Sources */,
 				D7476A401F0D2B4300350A4E /* ListMySeriesOutputPresenter.swift in Sources */,
 				D75BB8D51F0C3100008127D6 /* AlamofireHttpRequester.swift in Sources */,
-				D75BB8B41F0BE5F1008127D6 /* AuthRQ.swift in Sources */,
 				D7E3288F1F0EC87D00EF6B01 /* AuthenticationGatewayImpl.swift in Sources */,
 				D75BB8B11F0BE3EB008127D6 /* MySeriesGatewayImpl.swift in Sources */,
 				D7476A441F0D374500350A4E /* MySeriesRepository.swift in Sources */,

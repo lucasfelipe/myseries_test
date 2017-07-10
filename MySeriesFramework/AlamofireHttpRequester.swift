@@ -21,10 +21,15 @@ class AlamofireHttpRequester: SessionDelegate {
         backgroundQueue.async {
             let params = parameters.toJSON()
             self.doRequest(url: url, method: method, params: params, encoding: encoding, success: { (result) in
+                
                 if let object = Mapper<Response>().map(JSONObject: result) {
+                    
                     completion(ResultWrapper<Response>(with: [object]))
+                
                 } else if let arrayObj = Mapper<Response>().mapArray(JSONObject: result) {
+                    
                     completion(ResultWrapper<Response>(with: arrayObj))
+                
                 } else { completion(ResultWrapper<Response>(with: HttpError.unknown)) }
             }, failure: { (error) in
                 completion(ResultWrapper<Response>(with: error))

@@ -38,15 +38,17 @@ public class AuthenticationGatewayImpl: NSObject, AuthenticationGateway, URLSess
             
             var request = URLRequest(url: urlGetToken)
             request.addValue("application/json", forHTTPHeaderField: "Content-type")
+            request.addValue("application/json", forHTTPHeaderField: "Accept")
             request.httpMethod = "POST"
             request.httpBody = self.credentials.toJSONString()?.data(using: .utf8)
             
             self.urlSession.dataTask(with: request, completionHandler: { (responseData, response, error) in
-                if let tokenString = String(data: responseData!, encoding: .utf8) {
-                    guard let token = Mapper<Token>().map(JSONObject: tokenString) else { return }
+                guard let tokenString = try? JSONSerialization.jsonObject(with: responseData!, options: .allowFragments) as! [String: Any] else { return }
+                guard let token = Mapper<Token>().map(JSONObject: tokenString) else { return }
+                DispatchQueue.main.async {
                     self.tokenRepository.createOrUpdate(token: token)
+                    NotificationCenter.default.post(name: MySeriesNotification.StopAuthNotification, object: nil)
                 }
-                
             }).resume()
             
         }
