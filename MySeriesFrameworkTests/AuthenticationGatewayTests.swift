@@ -22,7 +22,7 @@ class AuthenticationGatewayTests: XCTestCase {
         }
         self.authenticationService.authenticate()
         
-        waitForExpectations(timeout: 60) { (authExpError) in
+        waitForExpectations(timeout: 30) { (authExpError) in
             XCTAssertNil(authExpError, authExpError!.localizedDescription)
         }
         

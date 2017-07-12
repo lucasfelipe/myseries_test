@@ -52,6 +52,8 @@
 		D7F8FD571F164787008544ED /* LoginMySeriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8FD561F164787008544ED /* LoginMySeriesInteractor.swift */; };
 		D7F8FD591F164EE4008544ED /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8FD581F164EE4008544ED /* LoginRouter.swift */; };
 		D7F8FD5B1F164F83008544ED /* LoginRouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8FD5A1F164F83008544ED /* LoginRouterApp.swift */; };
+		D7F8FD5D1F16565E008544ED /* LoginMySeriesOutputPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8FD5C1F16565E008544ED /* LoginMySeriesOutputPresenterMock.swift */; };
+		D7F8FD5F1F16595C008544ED /* LoginMySeriesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8FD5E1F16595C008544ED /* LoginMySeriesInteractorTests.swift */; };
 		DF57849F13B5ACB48089BF73 /* Pods_MySeries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9497D69CFB75776F24AFEC4 /* Pods_MySeries.framework */; };
 		FD7691678316CFCFE28F84F9 /* Pods_MySeriesFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE6211452432202E706544A /* Pods_MySeriesFrameworkTests.framework */; };
 /* End PBXBuildFile section */
@@ -171,6 +173,8 @@
 		D7F8FD561F164787008544ED /* LoginMySeriesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMySeriesInteractor.swift; sourceTree = "<group>"; };
 		D7F8FD581F164EE4008544ED /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		D7F8FD5A1F164F83008544ED /* LoginRouterApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterApp.swift; sourceTree = "<group>"; };
+		D7F8FD5C1F16565E008544ED /* LoginMySeriesOutputPresenterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMySeriesOutputPresenterMock.swift; sourceTree = "<group>"; };
+		D7F8FD5E1F16595C008544ED /* LoginMySeriesInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMySeriesInteractorTests.swift; sourceTree = "<group>"; };
 		D9497D69CFB75776F24AFEC4 /* Pods_MySeries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySeries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC6AE3FBD465958582A216D /* Pods-MySeries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySeries.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySeries/Pods-MySeries.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				D7DC13201F0D61D000DB1B79 /* ListMySeriesInteractorTests.swift */,
+				D7F8FD5E1F16595C008544ED /* LoginMySeriesInteractorTests.swift */,
 			);
 			name = Interactors;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				D7DC131B1F0D607900DB1B79 /* ListMySeriesOutputPresenterMock.swift */,
+				D7F8FD5C1F16565E008544ED /* LoginMySeriesOutputPresenterMock.swift */,
 			);
 			name = Presenters;
 			sourceTree = "<group>";
@@ -1028,6 +1034,8 @@
 				D7DC13211F0D61D000DB1B79 /* ListMySeriesInteractorTests.swift in Sources */,
 				D7476A3C1F0D2A6B00350A4E /* MySeriesGatewayStub.swift in Sources */,
 				D75BB8B91F0C00A6008127D6 /* AuthenticationGatewayTests.swift in Sources */,
+				D7F8FD5F1F16595C008544ED /* LoginMySeriesInteractorTests.swift in Sources */,
+				D7F8FD5D1F16565E008544ED /* LoginMySeriesOutputPresenterMock.swift in Sources */,
 				D7DC131C1F0D607900DB1B79 /* ListMySeriesOutputPresenterMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
