@@ -36,7 +36,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="webV" destination="oGG-Gi-1kY" id="CeU-qL-7TB"/>
+                        <outlet property="webView" destination="oGG-Gi-1kY" id="fwx-Vn-hR8"/>
                         <segue destination="GIz-pv-bZZ" kind="show" identifier="LOGIN_TO_LIST" id="nXi-ME-MdZ"/>
                     </connections>
                 </viewController>

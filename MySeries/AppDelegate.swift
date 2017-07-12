@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         if let loginView = self.window?.rootViewController as? LoginViewController {
-            loginView.requestToken(url: url)
+            loginView.loginInteractor.getToken(url)
         }
         return true
     }

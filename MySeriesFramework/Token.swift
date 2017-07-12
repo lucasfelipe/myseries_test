@@ -3,7 +3,7 @@ import Foundation
 import ObjectMapper
 import RealmSwift
 
-class Token: Object, Mappable {
+public class Token: Object, Mappable {
     dynamic var id = 0
     dynamic var accessToken: String?
     dynamic var tokenType: String?
@@ -12,11 +12,11 @@ class Token: Object, Mappable {
     dynamic var scope: String?
     dynamic var createdAt: Date?
     
-    required convenience init?(map: Map) {
+    required convenience public init?(map: Map) {
         self.init()
     }
     
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         accessToken <- map["access_token"]
         tokenType <- map["token_type"]
         expiresIn.value <- map["expires_in"]
@@ -30,7 +30,7 @@ class Token: Object, Mappable {
         return (date < Date())
     }
     
-    override static func primaryKey() -> String? {
+    override public static func primaryKey() -> String? {
         return "id"
     }
 }

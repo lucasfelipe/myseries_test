@@ -48,6 +48,10 @@
 		D7E3288B1F0EA5D900EF6B01 /* IdEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3288A1F0EA5D900EF6B01 /* IdEntity.swift */; };
 		D7E3288D1F0EC7E700EF6B01 /* AuthenticationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3288C1F0EC7E700EF6B01 /* AuthenticationGateway.swift */; };
 		D7E3288F1F0EC87D00EF6B01 /* AuthenticationGatewayImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E3288E1F0EC87D00EF6B01 /* AuthenticationGatewayImpl.swift */; };
+		D7F8FD551F1646C7008544ED /* LoginMySeriesOutputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8FD541F1646C7008544ED /* LoginMySeriesOutputPresenter.swift */; };
+		D7F8FD571F164787008544ED /* LoginMySeriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8FD561F164787008544ED /* LoginMySeriesInteractor.swift */; };
+		D7F8FD591F164EE4008544ED /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8FD581F164EE4008544ED /* LoginRouter.swift */; };
+		D7F8FD5B1F164F83008544ED /* LoginRouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8FD5A1F164F83008544ED /* LoginRouterApp.swift */; };
 		DF57849F13B5ACB48089BF73 /* Pods_MySeries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9497D69CFB75776F24AFEC4 /* Pods_MySeries.framework */; };
 		FD7691678316CFCFE28F84F9 /* Pods_MySeriesFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE6211452432202E706544A /* Pods_MySeriesFrameworkTests.framework */; };
 /* End PBXBuildFile section */
@@ -163,6 +167,10 @@
 		D7E3288A1F0EA5D900EF6B01 /* IdEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdEntity.swift; sourceTree = "<group>"; };
 		D7E3288C1F0EC7E700EF6B01 /* AuthenticationGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGateway.swift; sourceTree = "<group>"; };
 		D7E3288E1F0EC87D00EF6B01 /* AuthenticationGatewayImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationGatewayImpl.swift; sourceTree = "<group>"; };
+		D7F8FD541F1646C7008544ED /* LoginMySeriesOutputPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMySeriesOutputPresenter.swift; sourceTree = "<group>"; };
+		D7F8FD561F164787008544ED /* LoginMySeriesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMySeriesInteractor.swift; sourceTree = "<group>"; };
+		D7F8FD581F164EE4008544ED /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		D7F8FD5A1F164F83008544ED /* LoginRouterApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterApp.swift; sourceTree = "<group>"; };
 		D9497D69CFB75776F24AFEC4 /* Pods_MySeries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySeries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC6AE3FBD465958582A216D /* Pods-MySeries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySeries.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySeries/Pods-MySeries.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -395,6 +403,7 @@
 		D75BB89B1F0BBFF5008127D6 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				D7F8FD581F164EE4008544ED /* LoginRouter.swift */,
 			);
 			name = Routers;
 			sourceTree = "<group>";
@@ -403,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				D7476A3F1F0D2B4300350A4E /* ListMySeriesOutputPresenter.swift */,
+				D7F8FD541F1646C7008544ED /* LoginMySeriesOutputPresenter.swift */,
 			);
 			name = Presenters;
 			sourceTree = "<group>";
@@ -411,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				D7476A411F0D351D00350A4E /* ListMySeriesInteractor.swift */,
+				D7F8FD561F164787008544ED /* LoginMySeriesInteractor.swift */,
 			);
 			name = Interactors;
 			sourceTree = "<group>";
@@ -448,6 +459,7 @@
 		D75BB8A11F0BC041008127D6 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				D7F8FD5A1F164F83008544ED /* LoginRouterApp.swift */,
 			);
 			name = Routers;
 			sourceTree = "<group>";
@@ -954,6 +966,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7F8FD5B1F164F83008544ED /* LoginRouterApp.swift in Sources */,
 				D75BB8C31F0C13FA008127D6 /* LoginViewController.swift in Sources */,
 				D7DC132C1F0D800C00DB1B79 /* MySeriesCollectionViewCell.swift in Sources */,
 				D7DC13281F0D7C6A00DB1B79 /* ListMySeriesViewController.swift in Sources */,
@@ -990,10 +1003,13 @@
 				D75BB8AF1F0BE229008127D6 /* Token.swift in Sources */,
 				D7E3288B1F0EA5D900EF6B01 /* IdEntity.swift in Sources */,
 				D7476A421F0D351D00350A4E /* ListMySeriesInteractor.swift in Sources */,
+				D7F8FD551F1646C7008544ED /* LoginMySeriesOutputPresenter.swift in Sources */,
+				D7F8FD591F164EE4008544ED /* LoginRouter.swift in Sources */,
 				D7476A401F0D2B4300350A4E /* ListMySeriesOutputPresenter.swift in Sources */,
 				D75BB8D51F0C3100008127D6 /* AlamofireHttpRequester.swift in Sources */,
 				D7E3288F1F0EC87D00EF6B01 /* AuthenticationGatewayImpl.swift in Sources */,
 				D75BB8B11F0BE3EB008127D6 /* MySeriesGatewayImpl.swift in Sources */,
+				D7F8FD571F164787008544ED /* LoginMySeriesInteractor.swift in Sources */,
 				D7476A441F0D374500350A4E /* MySeriesRepository.swift in Sources */,
 				D7060C161F0FC14300ABF6D5 /* MySeriesNotifications.swift in Sources */,
 				D75BB8D31F0C2F8D008127D6 /* EpisodeEntity.swift in Sources */,

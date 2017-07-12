@@ -31,7 +31,7 @@ public class AuthenticationGatewayImpl: NSObject, AuthenticationGateway, URLSess
         
     }
     
-    public func getToken(_ url: URL) {
+    public func getToken(_ url: URL, completion: @escaping (_ token: Token) -> Void) {
         if let code = url.absoluteString.components(separatedBy: "?code=").last {
             guard let urlGetToken = URL(string: EndPoint.token.description) else { return }
             self.credentials.setCode(code: code)
@@ -46,8 +46,7 @@ public class AuthenticationGatewayImpl: NSObject, AuthenticationGateway, URLSess
                 guard let tokenString = try? JSONSerialization.jsonObject(with: responseData!, options: .allowFragments) as! [String: Any] else { return }
                 guard let token = Mapper<Token>().map(JSONObject: tokenString) else { return }
                 DispatchQueue.main.async {
-                    self.tokenRepository.createOrUpdate(token: token)
-                    NotificationCenter.default.post(name: MySeriesNotification.StopAuthNotification, object: nil)
+                   completion(token)
                 }
             }).resume()
             

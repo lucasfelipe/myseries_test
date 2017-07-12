@@ -4,37 +4,28 @@ import WebKit
 import MySeriesFramework
 
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, LoginMySeriesOutputPresenter {
 
-    @IBOutlet weak var webV: UIWebView!
-    
-    let service: AuthenticationGateway = AuthenticationGatewayImpl()
-    private let loginToListSegue = "LOGIN_TO_LIST"
+    @IBOutlet weak var webView: UIWebView!
+    var loginInteractor: LoginMySeriesInteractor!
+    var router: LoginRouter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.receiveRedirect(notification:)), name: MySeriesNotification.AuthNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.redirectToList), name: MySeriesNotification.StopAuthNotification, object: nil)
-        service.authenticate()
+        self.loginInteractor = LoginMySeriesInteractor(outputPresenter: self, repos: TokenRepositoryStore())
+        self.loginInteractor.authenticate()
+        
+        router = LoginRouterApp(with: self)
         
     }
     
-    func receiveRedirect(notification: Notification) {
-        let request = notification.object as! URLRequest
-        webV.loadRequest(request)
-    }
-
-    func requestToken(url: URL) {
-        service.getToken(url)
+    //MARK: LoginMySeriesOutputPresenter
+    func loadRequestAuthentication(request: URLRequest) {
+        webView.loadRequest(request)
     }
     
-    func redirectToList() {
-        self.performSegue(withIdentifier: self.loginToListSegue, sender: self)
+    func loginResumes() {
+        router.goToList()
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: MySeriesNotification.AuthNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: MySeriesNotification.StopAuthNotification, object: nil)
-    }
-
 }
